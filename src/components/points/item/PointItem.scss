@@ -1,0 +1,33 @@
+.PointItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover {
+    .PointItem_inner {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.PointItem_outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  border: 8px solid gray;
+}
+
+.PointItem_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid gray;
+}

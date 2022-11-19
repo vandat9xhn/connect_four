@@ -1,0 +1,21 @@
+.Points {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Points_y {
+  display: flex;
+}
+
+.Points_item_contain {
+  position: relative;
+  padding-top: 100%;
+}
+
+.Points_point {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
