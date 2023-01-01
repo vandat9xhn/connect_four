@@ -3,6 +3,7 @@ import * as React from "react";
 import "./Game.scss";
 
 import Points from "../points/Points";
+import Header from "../header/Header";
 
 //
 export interface GameProps {}
@@ -11,8 +12,10 @@ export interface GameProps {}
 function Game({}: GameProps) {
   //
   return (
-    <div>
-      <div></div>
+    <div className="Game">
+      <div>
+        <Header />
+      </div>
 
       <div className="Game_main">
         <div></div>

@@ -9,7 +9,7 @@ body {
   }
 
   margin: 0;
-  background-color: var(--bg-main);
+  // background-color: var(--bg-main);
   font-family: League Spartan, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
 }
@@ -21,7 +21,7 @@ body {
     // ---- THEME 1
 
     // bg
-    --bg-main: hsl(222, 26%, 31%);
+    --bg-main: #7646f7;
     --bg-keypad: hsl(223, 31%, 20%);
     --bg-screen: hsl(224, 36%, 15%);
 
@@ -109,19 +109,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 15px;
+  min-height: 100vh;
+  padding: 115px 65px;
 }
 
 .App_contain {
   display: flex;
   flex-direction: column;
 
-  width: 395px;
-  max-width: 100%;
-  height: 500px;
-  max-height: 100%;
-  overflow: hidden;
+  // width: 395px;
+  width: 100%;
+  // height: 500px;
+  // max-height: 100%;
+  // overflow: hidden;
+  background-image: linear-gradient(to bottom, #7646f7, #7a45fd);
 }
 
 .App_screen {

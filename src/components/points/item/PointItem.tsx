@@ -1,7 +1,8 @@
 import * as React from "react";
-import { COLOR_POINT } from "../../../data/point";
 
 import { handleChooseType, Point } from "../../../types";
+
+import PointItemInner from "./inner/PointItemInner";
 
 import "./PointItem.scss";
 
@@ -29,15 +30,9 @@ function PointItem({ point, x, y, handleChoose }: PointItemProps) {
     >
       <div className="PointItem_outer"></div>
 
-      <div
-        className="PointItem_inner"
-        style={{
-          backgroundColor:
-            point.which_player === ""
-              ? undefined
-              : COLOR_POINT[point.which_player],
-        }}
-      ></div>
+      <div className="PointItem_inner">
+        <PointItemInner point={point} />
+      </div>
     </div>
   );
 }

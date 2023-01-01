@@ -6,7 +6,7 @@ import "./styles/main.scss";
 import ContextGameComponent from "./context/game/ContextGameComponent";
 import Game from "./components/game/Game";
 
-// import design_pc from "../design/connect_four.webp";
+import design_pc from "../design/connect_four.webp";
 
 //
 export interface AppProps {}
@@ -27,13 +27,15 @@ function App({}: AppProps) {
   //
   return (
     <ContextGameComponent>
-      <div className="App">
-        <div className="App_contain">
-          <Game />
+      <div>
+        <div className="App">
+          <div className="App_contain">
+            <Game />
+          </div>
         </div>
 
-        <div className="display-none">
-          {/* <img src={design_pc} alt="" /> */}
+        <div className="display-noe">
+          <img src={design_pc} alt="" style={{ width: "100%" }} />
         </div>
       </div>
     </ContextGameComponent>

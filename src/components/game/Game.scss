@@ -1,9 +1,15 @@
+.Game {
+  padding: 35px;
+}
+
 .Game_main {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 35px;
 }
 
 .Game_points {
-  width: 400px;
+  width: 530px;
 }
