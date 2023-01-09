@@ -13,6 +13,7 @@ export interface GameObj {
   c_state: C_State;
   arr_point: Point[][];
   cur_player: WhichPlayer;
+  winner: 'player1' | 'player2' | ''
 }
 
 //

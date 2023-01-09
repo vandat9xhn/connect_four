@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { POINT_LENGTH } from "../constant";
 
 import { GameObj, handleChooseType } from "../types";
+import { checkIsWin } from "../utils/checkIsWin";
 
 const getInitialArrPoint = (): GameObj["arr_point"] => {
   const arr_point: GameObj["arr_point"] = [];
   // make rows; x, y from 0 -> 6
-  for (let y = 0; y < 7; y++) {
+  for (let y = 0; y < POINT_LENGTH; y++) {
     arr_point.push([]);
-    for (let x = 0; x < 7; x++) {
+    for (let x = 0; x < POINT_LENGTH; x++) {
       arr_point[y].push({ which_player: "" });
     }
   }
@@ -25,6 +27,7 @@ export function useGame() {
       arr_point: new_arr_point,
       cur_player: "player1",
       c_state: "waiting",
+      winner: "",
     };
   });
 
@@ -58,12 +61,19 @@ export function useGame() {
 
       const new_cur_player =
         state_obj.cur_player === "player1" ? "player2" : "player1";
+      const is_winner = checkIsWin({ arr_point: new_arr_point, x, y });
+      const new_winner = is_winner ? state_obj.cur_player : "";
+
+      if (is_winner) {
+        alert("winner");
+      }
 
       return {
         ...state_obj,
         arr_point: new_arr_point,
         c_state: "playing",
         cur_player: new_cur_player,
+        winner: new_winner,
       };
     });
   };
