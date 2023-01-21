@@ -64,8 +64,14 @@ export function useGame() {
       const is_winner = checkIsWin({ arr_point: new_arr_point, x, y });
       const new_winner = is_winner ? state_obj.cur_player : "";
 
-      if (is_winner) {
-        alert("winner");
+      if (new_winner) {
+        alert(`${new_winner} is winner`);
+        return {
+          ...state_obj,
+          arr_point: getInitialArrPoint(),
+          c_state: "playing",
+          cur_player: new_cur_player,
+        };
       }
 
       return {
@@ -73,7 +79,7 @@ export function useGame() {
         arr_point: new_arr_point,
         c_state: "playing",
         cur_player: new_cur_player,
-        winner: new_winner,
+        // winner: new_winner,
       };
     });
   };
